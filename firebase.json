@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/zurura-landing",
+    "public": "dist/zurura-landing/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
