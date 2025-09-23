@@ -85,9 +85,8 @@
           <div class="carousel-indicators absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
             <button *ngFor="let image of carouselImages; let i = index"
                     (click)="goToSlide(i)"
-                    class="w-2 h-2 rounded-full transition-all"
-                    [class.bg-white]="i === currentSlide"
-                    [class.bg-white/50]="i !== currentSlide"
+                    class="w-2 h-2 rounded-full transition-all bg-white"
+                    [class.opacity-50]="i !== currentSlide"
                     [attr.aria-label]="'Go to slide ' + (i + 1)">
             </button>
           </div>
