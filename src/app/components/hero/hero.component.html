@@ -7,6 +7,7 @@
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
         <span class="text-sm font-medium">{{ translations.trustedBy }}</span>
+
       </div>
 
       <h1 class="text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -50,8 +51,47 @@
 
     <div class="relative">
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-        <img src="/assets/images/children-in-kindergarten-classroom-doing-art-activ.jpg" alt="Children in kindergarten classroom"
-          class="w-full h-80 object-cover" />
+        <!-- Carrusel Container -->
+        <div class="carousel-container relative h-80 overflow-hidden">
+          <!-- Imágenes del carrusel -->
+          <div class="carousel-slide flex" 
+               [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
+            <div *ngFor="let image of carouselImages" 
+                 class="w-full h-full flex-shrink-0">
+              <img [src]="image.src" 
+                   [alt]="image.alt"
+                   class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Controles de navegación -->
+          <div class="carousel-controls">
+            <button (click)="previousSlide()" 
+                    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all">
+              <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            
+            <button (click)="nextSlide()" 
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all">
+              <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Indicadores de puntos -->
+          <div class="carousel-indicators absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+            <button *ngFor="let image of carouselImages; let i = index"
+                    (click)="goToSlide(i)"
+                    class="w-2 h-2 rounded-full transition-all"
+                    [class.bg-white]="i === currentSlide"
+                    [class.bg-white/50]="i !== currentSlide"
+                    [attr.aria-label]="'Go to slide ' + (i + 1)">
+            </button>
+          </div>
+        </div>
 
         <!-- Activity Card Overlay -->
         <div class="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-4 min-w-48">
@@ -83,8 +123,8 @@
               </svg>
             </div>
             <div>
-              <div class="font-semibold text-gray-900">{{ translations.artClass }}</div>
-              <div class="text-sm text-gray-500">{{ translations.startingIn }}</div>
+              <div class="font-semibold text-gray-900">{{ carouselImages[currentSlide].title }}</div>
+              <div class="text-sm text-gray-500">{{ carouselImages[currentSlide].description }}</div>
             </div>
           </div>
         </div>

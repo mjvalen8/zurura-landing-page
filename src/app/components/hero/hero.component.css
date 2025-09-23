@@ -1,0 +1,46 @@
+/* Carrusel styles */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-controls button {
+  backdrop-filter: blur(4px);
+}
+
+.carousel-controls button:hover {
+  transform: scale(1.1);
+}
+
+.carousel-indicators button {
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-controls button {
+    padding: 0.5rem;
+  }
+  
+  .carousel-controls button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .carousel-indicators {
+    gap: 0.5rem;
+  }
+  
+  .carousel-indicators button {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
