@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslationService } from '../../services/translation.service';
+import emailjs from '@emailjs/browser';
 
 interface ContactFormData {
   firstName: string;
@@ -25,6 +26,11 @@ export class ContactFormComponent implements OnInit {
   isSubmitting = false;
   isSubmitted = false;
 
+  // EmailJS configuration - Replace with your actual values
+  private readonly EMAILJS_SERVICE_ID = 'service_zurura';
+  private readonly EMAILJS_TEMPLATE_ID = 'template_86mozuk';
+  private readonly EMAILJS_PUBLIC_KEY = '9_IXVLKYZ20hyTLc8';
+
   formData: ContactFormData = {
     firstName: '',
     lastName: '',
@@ -43,15 +49,32 @@ export class ContactFormComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.isSubmitting) return;
 
     this.isSubmitting = true;
     this.isSubmitted = false;
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', this.formData);
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: `${this.formData.firstName} ${this.formData.lastName}`,
+        from_email: this.formData.email,
+        organization: this.formData.organization || 'Not specified',
+        subject: this.getSubjectText(this.formData.subject),
+        message: this.formData.message,
+        to_email: 'hello@zururakids.com'
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        this.EMAILJS_SERVICE_ID,
+        this.EMAILJS_TEMPLATE_ID,
+        templateParams,
+        this.EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully!');
       this.isSubmitting = false;
       this.isSubmitted = true;
       
@@ -59,7 +82,13 @@ export class ContactFormComponent implements OnInit {
       setTimeout(() => {
         this.resetForm();
       }, 3000);
-    }, 2000);
+
+    } catch (error) {
+      console.error('Error sending email:', error);
+      this.isSubmitting = false;
+      // You might want to show an error message to the user
+      alert('Error sending message. Please try again.');
+    }
   }
 
   resetForm(): void {
@@ -73,6 +102,17 @@ export class ContactFormComponent implements OnInit {
       privacy: false
     };
     this.isSubmitted = false;
+  }
+
+  getSubjectText(subjectKey: string): string {
+    const subjectMap: { [key: string]: string } = {
+      'general': 'General Inquiry',
+      'demo': 'Request Demo',
+      'support': 'Technical Support',
+      'partnership': 'Partnership',
+      'other': 'Other'
+    };
+    return subjectMap[subjectKey] || 'General Inquiry';
   }
 
   isValidEmail(email: string): boolean {

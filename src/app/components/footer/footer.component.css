@@ -1,0 +1,16 @@
+/* Footer styles */
+footer {
+  background-color: #4b5563; /* gray-600 */
+}
+
+/* Hover effects for links */
+footer a:hover {
+  color: #fb923c; /* orange-400 */
+  transition: color 0.3s ease;
+}
+
+/* Email button hover effect */
+footer .bg-orange-500:hover {
+  background-color: #ea580c; /* orange-600 */
+  transition: background-color 0.3s ease;
+}

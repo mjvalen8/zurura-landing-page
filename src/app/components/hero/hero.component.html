@@ -19,32 +19,34 @@
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 mb-12">
-        <button
-          class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors">
+        <a href="#contact"
+          class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors inline-block">
           {{ translations.getStarted }}
-        </button>
-        <button
+        </a>
+        <!-- <button
           class="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg text-lg font-medium flex items-center gap-2 bg-transparent hover:bg-gray-50 transition-colors">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M8 5v14l11-7z" />
           </svg>
           {{ translations.watchDemo }}
-        </button>
+        </button> -->
       </div>
 
-      <!-- Stats -->
-      <div class="flex gap-12">
-        <div>
-          <div class="text-3xl font-bold text-orange-500">200+</div>
-          <div class="text-gray-600">{{ translations.schools }}</div>
+      <!-- Formula -->
+      <div class="formula-container">
+        <div class="formula-item">
+          <div class="text-2xl font-bold text-orange-500">{{ translations.organized }}</div>
+          <div class="text-lg text-gray-600">{{ translations.schools }}</div>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-green-500">5000+</div>
-          <div class="text-gray-600">{{ translations.children }}</div>
+        <div class="formula-equals">=</div>
+        <div class="formula-item">
+          <div class="text-2xl font-bold text-green-500">{{ translations.happy }}</div>
+          <div class="text-lg text-gray-600">{{ translations.children }}</div>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-blue-500">15k+</div>
-          <div class="text-gray-600">{{ translations.parents }}</div>
+        <div class="formula-equals">=</div>
+        <div class="formula-item">
+          <div class="text-2xl font-bold text-blue-500">{{ translations.satisfied }}</div>
+          <div class="text-lg text-gray-600">{{ translations.parents }}</div>
         </div>
       </div>
     </div>
@@ -52,7 +54,7 @@
     <div class="relative">
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
         <!-- Carrusel Container -->
-        <div class="carousel-container relative h-80 overflow-hidden">
+        <div class="carousel-container relative h-64 overflow-hidden">
           <!-- Imágenes del carrusel -->
           <div class="carousel-slide flex" 
                [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
@@ -122,8 +124,8 @@
               </svg>
             </div>
             <div>
-              <div class="font-semibold text-gray-900">{{ carouselImages[currentSlide].title }}</div>
-              <div class="text-sm text-gray-500">{{ carouselImages[currentSlide].description }}</div>
+              <div class="font-semibold text-gray-900">{{ translations[carouselImages[currentSlide].titleKey] }}</div>
+              <div class="text-sm text-gray-500">{{ translations[carouselImages[currentSlide].descriptionKey] }}</div>
             </div>
           </div>
         </div>

@@ -17,28 +17,64 @@ export class HeroComponent implements OnInit, OnDestroy {
   // Array de imágenes para el carrusel
   carouselImages = [
     {
-      src: '/assets/images/children-in-kindergarten-classroom-doing-art-activ.jpg',
-      alt: 'Children in kindergarten classroom doing art activities',
-      title: 'Art Activities',
-      description: 'Creative learning through art'
+      src: '/assets/images/1-parent-leaving-kid.png',
+      alt: 'Daily drop-off scene',
+      titleKey: 'carouselImage1Title',
+      descriptionKey: 'carouselImage1Desc'
     },
     {
-      src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop&crop=faces',
-      alt: 'Children playing outdoor games',
-      title: 'Outdoor Play',
-      description: 'Fun and healthy outdoor activities'
+      src: '/assets/images/2-african-parent-remote-office-view.jpeg',
+      alt: 'Remote work scene',
+      titleKey: 'carouselImage2Title',
+      descriptionKey: 'carouselImage2Desc'
     },
     {
-      src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=600&fit=crop&crop=faces',
-      alt: 'Children learning numbers and math',
-      title: 'Math Learning',
-      description: 'Interactive number games'
+      src: '/assets/images/3-attendance-tracking-scene.png',
+      alt: 'Attendance tracking scene',
+      titleKey: 'carouselImage3Title',
+      descriptionKey: 'carouselImage3Desc'
     },
     {
-      src: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop&crop=faces',
-      alt: 'Children reading books together',
-      title: 'Reading Time',
-      description: 'Building literacy skills'
+      src: '/assets/images/4-teacher-working-on-attendance.png',
+      alt: 'Teacher management scene',
+      titleKey: 'carouselImage4Title',
+      descriptionKey: 'carouselImage4Desc'
+    },
+    {
+      src: '/assets/images/5-african-kids-logging-nap-status.jpeg',
+      alt: 'Nap time scene',
+      titleKey: 'carouselImage5Title',
+      descriptionKey: 'carouselImage5Desc'
+    },
+    {
+      src: '/assets/images/6-birthday-celebration.png',
+      alt: 'Birthday celebration scene',
+      titleKey: 'carouselImage6Title',
+      descriptionKey: 'carouselImage6Desc'
+    },
+    {
+      src: '/assets/images/7-teacher-zoomed-on-laptop.png',
+      alt: 'Digital learning scene',
+      titleKey: 'carouselImage7Title',
+      descriptionKey: 'carouselImage7Desc'
+    },
+    {
+      src: '/assets/images/8-children-playing-outdoors.jpeg',
+      alt: 'Outdoor play scene',
+      titleKey: 'carouselImage8Title',
+      descriptionKey: 'carouselImage8Desc'
+    },
+    {
+      src: '/assets/images/9-building-with-blocks.jpeg',
+      alt: 'Building blocks scene',
+      titleKey: 'carouselImage9Title',
+      descriptionKey: 'carouselImage9Desc'
+    },
+    {
+      src: '/assets/images/10-children-playing-outdoors.jpeg',
+      alt: 'Group activities scene',
+      titleKey: 'carouselImage10Title',
+      descriptionKey: 'carouselImage10Desc'
     }
   ];
 

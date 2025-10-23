@@ -24,6 +24,30 @@
   transform: scale(1.2);
 }
 
+/* Formula styles */
+.formula-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.formula-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.formula-equals {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f97316; /* Orange-500 color */
+  margin: 0 0.5rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .carousel-controls button {
@@ -43,4 +67,61 @@
     width: 0.5rem;
     height: 0.5rem;
   }
+  
+  /* Fix carousel height on mobile */
+  .carousel-container {
+    height: 16rem !important;
+  }
+  
+  .carousel-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .formula-container {
+    gap: 0.5rem;
+  }
+  
+  .formula-equals {
+    font-size: 2rem;
+    margin: 0 0.25rem;
+    color: #f97316; /* Orange-500 color */
+  }
+  
+  .formula-item div:first-child {
+    font-size: 1.5rem !important;
+  }
+  
+  .formula-item div:last-child {
+    font-size: 1rem !important;
+  }
 }
+
+@media (max-width: 480px) {
+  .formula-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .formula-equals {
+    transform: none; /* Remove rotation */
+    font-size: 1.5rem;
+    color: #f97316; /* Orange-500 color */
+    margin: 0.25rem 0;
+  }
+}
+
+/* Responsive carousel heights for larger screens */
+@media (min-width: 1024px) {
+  .carousel-container {
+    height: 24rem; /* h-96 - more rectangular */
+  }
+}
+
+@media (min-width: 1280px) {
+  .carousel-container {
+    height: 28rem; /* h-112 - more rectangular */
+  }
+}
+
