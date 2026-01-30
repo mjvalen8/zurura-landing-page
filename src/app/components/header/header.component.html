@@ -3,7 +3,7 @@
   <!-- Desktop Header -->
   <div class="hidden md:flex items-center justify-between px-6 py-4">
     <a href="#hero" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-      <img src="/assets/logo/logo-96.svg" alt="Zurura Kids Logo" class="h-12 w-auto">
+      <img src="/assets/logo/logo-48.svg" alt="Zurura Kids Logo" class="h-20 w-auto">
       <div>
         <h1 class="text-xl font-bold text-gray-900">Zurura Kids</h1>
         <p class="text-sm text-gray-600">Digital Kindergarten Agenda</p>
@@ -43,11 +43,13 @@
         </div>
       </div>
       
-      <button
+      <a
+        href="https://app.zururakids.com"
+        target="_blank"
         class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition-colors">
         <span>👤</span>
         {{ translations.login }}
-      </button>
+      </a>
     </div>
   </div>
 
@@ -56,7 +58,7 @@
     <!-- Top Row -->
     <div class="flex items-center justify-between px-4 py-3">
       <a href="#hero" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-        <img src="/assets/logo/logo-96.svg" alt="Zurura Kids Logo" class="h-8 w-auto">
+        <img src="/assets/logo/logo-48.svg" alt="Zurura Kids Logo" class="h-8 w-auto">
         <div>
           <h1 class="text-lg font-bold text-gray-900">Zurura Kids</h1>
           <p class="text-xs text-gray-600">Digital Kindergarten Agenda</p>
@@ -105,11 +107,13 @@
         <a href="#features" (click)="closeMobileMenu()" class="text-gray-700 hover:text-gray-900 transition-colors py-2">{{ translations.features }}</a>
         <a href="#about" (click)="closeMobileMenu()" class="text-gray-700 hover:text-gray-900 transition-colors py-2">{{ translations.about }}</a>
         <a href="#contact" (click)="closeMobileMenu()" class="text-gray-700 hover:text-gray-900 transition-colors py-2">{{ translations.contact }}</a>
-        <button
+        <a
+          href="https://app.zururakids.com"
+          target="_blank"
           class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors w-full justify-center mt-2">
           <span>👤</span>
           {{ translations.login }}
-        </button>
+        </a>
       </nav>
     </div>
   </div>

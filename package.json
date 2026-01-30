@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && npm run postbuild",
+    "postbuild": "cp src/assets/documents/privacypolicy.pdf dist/zurura-landing/browser/privacypolicy.pdf 2>/dev/null || echo 'PDF no encontrado. Por favor coloca privacypolicy.pdf en src/assets/documents/' && cp src/assets/documents/termsofservice.pdf dist/zurura-landing/browser/termsofservice.pdf 2>/dev/null || echo 'PDF no encontrado. Por favor coloca termsofservice.pdf en src/assets/documents/'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

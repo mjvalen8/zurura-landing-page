@@ -15,12 +15,12 @@ export interface Translation {
   heroDescription: string;
   getStarted: string;
   watchDemo: string;
-  schools: string;
-  children: string;
-  parents: string;
-  organized: string;
-  happy: string;
-  satisfied: string;
+  formulaSubtitle1: string;
+  formulaSubtitle2: string;
+  formulaSubtitle3: string;
+  formulaTitle1: string;
+  formulaTitle2: string;
+  formulaTitle3: string;
   activeKids: string;
   today: string;
   artClass: string;
@@ -116,6 +116,8 @@ export interface Translation {
   requestDemo: string;
   technicalSupport: string;
   partnership: string;
+  deleteAccount: string;
+  dataDeletion: string;
   other: string;
   message: string;
   messagePlaceholder: string;
@@ -147,12 +149,12 @@ export class TranslationService {
       heroDescription: 'Connect teachers, parents, and children with our comprehensive digital platform. Track activities, share moments, and keep everyone informed.',
       getStarted: 'Get Started Today →',
       watchDemo: 'Watch Demo',
-      schools: 'Schools',
-      children: 'Children',
-      parents: 'Parents',
-      organized: 'Organized',
-      happy: 'Happy',
-      satisfied: 'Satisfied',
+      formulaSubtitle1: 'Schools',
+      formulaSubtitle2: 'Children',
+      formulaSubtitle3: 'Parents',
+      formulaTitle1: 'Organized',
+      formulaTitle2: 'Happy',
+      formulaTitle3: 'Satisfied',
       activeKids: '25 Active Kids',
       today: 'Today',
       artClass: 'Art Class',
@@ -248,6 +250,8 @@ export class TranslationService {
       requestDemo: 'Request Demo',
       technicalSupport: 'Technical Support',
       partnership: 'Partnership',
+      deleteAccount: 'Delete Account and Data',
+      dataDeletion: 'Data Deletion',
       other: 'Other',
       message: 'Message',
       messagePlaceholder: 'Tell us how we can help you...',
@@ -270,12 +274,12 @@ export class TranslationService {
       heroDescription: 'Conecta maestros, padres y niños con nuestra plataforma digital integral. Rastrea actividades, comparte momentos y mantén a todos informados.',
       getStarted: 'Comenzar Hoy →',
       watchDemo: 'Ver Demo',
-      schools: 'Jardines',
-      children: 'Niños',
-      parents: 'Padres',
-      organized: 'Organizados',
-      happy: 'Felices',
-      satisfied: 'Satisfechos',
+      formulaSubtitle1: 'Organizados',
+      formulaSubtitle2: 'Felices',
+      formulaSubtitle3: 'Satisfechos',
+      formulaTitle1: 'Jardines',
+      formulaTitle2: 'Niños',
+      formulaTitle3: 'Padres',
       activeKids: '25 Niños Activos',
       today: 'Hoy',
       artClass: 'Clase de Arte',
@@ -371,6 +375,8 @@ export class TranslationService {
       requestDemo: 'Solicitar Demo',
       technicalSupport: 'Soporte Técnico',
       partnership: 'Asociación',
+      deleteAccount: 'Eliminar Cuenta y Datos',
+      dataDeletion: 'Eliminación de Datos',
       other: 'Otro',
       message: 'Mensaje',
       messagePlaceholder: 'Cuéntanos cómo podemos ayudarte...',

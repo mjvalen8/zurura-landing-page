@@ -1,7 +1,7 @@
 <footer class="bg-gray-600 text-white py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Top Section - Four Columns -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto justify-items-center">
       
       <!-- Column 1: Support -->
       <!-- <div>
@@ -23,17 +23,17 @@
       </div> -->
 
       <!-- Column 3: More Information -->
-      <div class="text-center">
+      <div class="text-left w-full md:w-auto">
         <h3 class="text-lg font-bold mb-4">{{ translations.footerInfoTitle }}</h3>
         <div class="space-y-2">
           <a href="#" class="block text-white hover:text-orange-400 transition-colors">{{ translations.footerBlog }}</a>
-          <a href="#" class="block text-white hover:text-orange-400 transition-colors">{{ translations.footerTerms }}</a>
-          <a href="#" class="block text-white hover:text-orange-400 transition-colors">{{ translations.footerPrivacy }}</a>
+          <a [href]="termsAndConditionsUrl" target="_blank" class="block text-white hover:text-orange-400 transition-colors">{{ translations.footerTerms }}</a>
+          <a [href]="privacyPolicyUrl" target="_blank" class="block text-white hover:text-orange-400 transition-colors">{{ translations.footerPrivacy }}</a>
         </div>
       </div>
 
       <!-- Column 4: Contact -->
-      <div class="text-center">
+      <div class="text-left w-full md:w-auto">
         <h3 class="text-lg font-bold mb-4">{{ translations.footerContactTitle }}</h3>
         <div class="space-y-3">
           <!-- Phone Numbers with Flags -->
@@ -51,7 +51,7 @@
           </div> -->
           
           <!-- Email Button -->
-          <div class="flex justify-center">
+          <div>
             <a href="mailto:hello&#64;zururakids.com" 
                class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-colors mt-4">
               hello&#64;zururakids.com

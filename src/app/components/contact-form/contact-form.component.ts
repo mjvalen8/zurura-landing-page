@@ -26,10 +26,16 @@ export class ContactFormComponent implements OnInit {
   isSubmitting = false;
   isSubmitted = false;
 
-  // EmailJS configuration - Replace with your actual values
-  private readonly EMAILJS_SERVICE_ID = 'service_zurura';
+  // EmailJS configuration - Outlook/GoDaddy
+  // SERVICE_ID: ID del servicio SMTP de Outlook configurado en EmailJS
+  private readonly EMAILJS_SERVICE_ID = 'service_oeiws9r';
+  // TEMPLATE_ID: ID del template de email en EmailJS
   private readonly EMAILJS_TEMPLATE_ID = 'template_86mozuk';
+  // PUBLIC_KEY: Clave pública de tu cuenta EmailJS (NO cambia, es la misma para todos tus servicios)
   private readonly EMAILJS_PUBLIC_KEY = '9_IXVLKYZ20hyTLc8';
+  
+  // Email destination - Dirección de correo destino (Outlook/GoDaddy)
+  private readonly RECIPIENT_EMAIL = 'admin@zururakids.com';
 
   formData: ContactFormData = {
     firstName: '',
@@ -63,7 +69,7 @@ export class ContactFormComponent implements OnInit {
         organization: this.formData.organization || 'Not specified',
         subject: this.getSubjectText(this.formData.subject),
         message: this.formData.message,
-        to_email: 'hello@zururakids.com'
+        to_email: this.RECIPIENT_EMAIL
       };
 
       // Send email using EmailJS
@@ -110,6 +116,8 @@ export class ContactFormComponent implements OnInit {
       'demo': 'Request Demo',
       'support': 'Technical Support',
       'partnership': 'Partnership',
+      'deleteAccount': 'Delete Account and Data',
+      'dataDeletion': 'Data Deletion',
       'other': 'Other'
     };
     return subjectMap[subjectKey] || 'General Inquiry';
