@@ -1,0 +1,111 @@
+<div class="min-h-screen bg-gray-50">
+  <app-header></app-header>
+  <div class="py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="mb-8">
+        <a routerLink="/" class="text-orange-500 hover:text-orange-600 mb-4 inline-block">
+          {{ translations.backToHome }}
+        </a>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ translations.privacyPolicyTitle }}</h1>
+        <p class="text-gray-600">{{ translations.lastUpdated }} {{ lastUpdated }}</p>
+      </div>
+
+    <!-- Content -->
+    <div class="bg-white rounded-lg shadow-md p-8 space-y-6">
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">1. {{ translations.privacyIntroduction }}</h2>
+        <p class="text-gray-700 leading-relaxed">
+          {{ translations.privacyIntro }}
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">2. {{ translations.privacyInfoCollected }}</h2>
+        <p class="text-gray-700 leading-relaxed mb-3">
+          {{ translations.privacyInfoCollectedDesc }}
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+          <li>{{ translations.privacyInfoCollectedList1 }}</li>
+          <li>{{ translations.privacyInfoCollectedList2 }}</li>
+          <li>{{ translations.privacyInfoCollectedList3 }}</li>
+          <li>{{ translations.privacyInfoCollectedList4 }}</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">3. {{ translations.privacyHowWeUse }}</h2>
+        <p class="text-gray-700 leading-relaxed mb-3">
+          {{ translations.privacyHowWeUseDesc }}
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+          <li>{{ translations.privacyHowWeUseList1 }}</li>
+          <li>{{ translations.privacyHowWeUseList2 }}</li>
+          <li>{{ translations.privacyHowWeUseList3 }}</li>
+          <li>{{ translations.privacyHowWeUseList4 }}</li>
+          <li>{{ translations.privacyHowWeUseList5 }}</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">4. {{ translations.privacySharing }}</h2>
+        <p class="text-gray-700 leading-relaxed">
+          {{ translations.privacySharingDesc }}
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4 mt-3">
+          <li>{{ translations.privacySharingList1 }}</li>
+          <li>{{ translations.privacySharingList2 }}</li>
+          <li>{{ translations.privacySharingList3 }}</li>
+          <li>{{ translations.privacySharingList4 }}</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">5. {{ translations.privacySecurity }}</h2>
+        <p class="text-gray-700 leading-relaxed">
+          {{ translations.privacySecurityDesc }}
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">6. {{ translations.privacyRights }}</h2>
+        <p class="text-gray-700 leading-relaxed mb-3">
+          {{ translations.privacyRightsDesc }}
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+          <li>{{ translations.privacyRightsList1 }}</li>
+          <li>{{ translations.privacyRightsList2 }}</li>
+          <li>{{ translations.privacyRightsList3 }}</li>
+          <li>{{ translations.privacyRightsList4 }}</li>
+          <li>{{ translations.privacyRightsList5 }}</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">7. {{ translations.privacyCookies }}</h2>
+        <p class="text-gray-700 leading-relaxed">
+          {{ translations.privacyCookiesDesc }}
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">8. {{ translations.privacyChanges }}</h2>
+        <p class="text-gray-700 leading-relaxed">
+          {{ translations.privacyChangesDesc }}
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">9. {{ translations.privacyContact }}</h2>
+        <p class="text-gray-700 leading-relaxed">
+          {{ translations.privacyContactDesc }}
+        </p>
+        <p class="text-gray-700 mt-3">
+          <strong>{{ translations.privacyContactEmail }}:</strong> <a href="mailto:hello&#64;zururakids.com" class="text-orange-500 hover:text-orange-600">hello&#64;zururakids.com</a>
+        </p>
+      </section>
+    </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

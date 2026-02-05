@@ -125,6 +125,78 @@ export interface Translation {
   sending: string;
   messageSent: string;
   thankYou: string;
+  
+  // Privacy Policy & Terms
+  lastUpdated: string;
+  backToHome: string;
+  privacyPolicyTitle: string;
+  termsTitle: string;
+  privacyIntroduction: string;
+  privacyIntro: string;
+  privacyInfoCollected: string;
+  privacyInfoCollectedDesc: string;
+  privacyInfoCollectedList1: string;
+  privacyInfoCollectedList2: string;
+  privacyInfoCollectedList3: string;
+  privacyInfoCollectedList4: string;
+  privacyHowWeUse: string;
+  privacyHowWeUseDesc: string;
+  privacyHowWeUseList1: string;
+  privacyHowWeUseList2: string;
+  privacyHowWeUseList3: string;
+  privacyHowWeUseList4: string;
+  privacyHowWeUseList5: string;
+  privacySharing: string;
+  privacySharingDesc: string;
+  privacySharingList1: string;
+  privacySharingList2: string;
+  privacySharingList3: string;
+  privacySharingList4: string;
+  privacySecurity: string;
+  privacySecurityDesc: string;
+  privacyRights: string;
+  privacyRightsDesc: string;
+  privacyRightsList1: string;
+  privacyRightsList2: string;
+  privacyRightsList3: string;
+  privacyRightsList4: string;
+  privacyRightsList5: string;
+  privacyCookies: string;
+  privacyCookiesDesc: string;
+  privacyChanges: string;
+  privacyChangesDesc: string;
+  privacyContact: string;
+  privacyContactDesc: string;
+  privacyContactEmail: string;
+  
+  termsAcceptance: string;
+  termsAcceptanceDesc: string;
+  termsServiceDesc: string;
+  termsServiceDescText: string;
+  termsUsage: string;
+  termsUsageDesc: string;
+  termsUsageList1: string;
+  termsUsageList2: string;
+  termsUsageList3: string;
+  termsUsageList4: string;
+  termsUsageList5: string;
+  termsAccounts: string;
+  termsAccountsDesc: string;
+  termsIntellectual: string;
+  termsIntellectualDesc: string;
+  termsLiability: string;
+  termsLiabilityDesc: string;
+  termsModifications: string;
+  termsModificationsDesc: string;
+  termsTermination: string;
+  termsTerminationDesc: string;
+  termsLaw: string;
+  termsLawDesc: string;
+  termsChanges: string;
+  termsChangesDesc: string;
+  termsContact: string;
+  termsContactDesc: string;
+  termsContactEmail: string;
 }
 
 @Injectable({
@@ -258,7 +330,79 @@ export class TranslationService {
       privacyAgreement: 'I agree to the privacy policy and terms of service.',
       sending: 'Sending...',
       messageSent: 'Message sent successfully!',
-      thankYou: 'Thank you for contacting us. We\'ll get back to you within 24 hours.'
+      thankYou: 'Thank you for contacting us. We\'ll get back to you within 24 hours.',
+      
+      // Privacy Policy & Terms
+      lastUpdated: 'Last updated:',
+      backToHome: '← Back to Home',
+      privacyPolicyTitle: 'Privacy Policy',
+      termsTitle: 'Terms and Conditions',
+      privacyIntroduction: 'Introduction',
+      privacyIntro: 'At Zurura Kids, we are committed to protecting the privacy and security of our users\' personal information. This Privacy Policy describes how we collect, use, store, and protect your information when you use our services.',
+      privacyInfoCollected: 'Information We Collect',
+      privacyInfoCollectedDesc: 'We collect information that you provide directly to us, including:',
+      privacyInfoCollectedList1: 'Contact information (name, email address, phone number)',
+      privacyInfoCollectedList2: 'Organization or school information',
+      privacyInfoCollectedList3: 'Information about children under your care (name, date of birth, attendance information)',
+      privacyInfoCollectedList4: 'Any other information you choose to provide us',
+      privacyHowWeUse: 'How We Use Your Information',
+      privacyHowWeUseDesc: 'We use the collected information to:',
+      privacyHowWeUseList1: 'Provide, maintain, and improve our services',
+      privacyHowWeUseList2: 'Process and manage information requests',
+      privacyHowWeUseList3: 'Communicate with you about our services',
+      privacyHowWeUseList4: 'Comply with legal and regulatory obligations',
+      privacyHowWeUseList5: 'Protect the rights and security of our users',
+      privacySharing: 'Sharing Information',
+      privacySharingDesc: 'We do not sell, rent, or share your personal information with third parties, except in the following circumstances:',
+      privacySharingList1: 'With your explicit consent',
+      privacySharingList2: 'To comply with legal obligations',
+      privacySharingList3: 'To protect our rights and security',
+      privacySharingList4: 'With service providers who help us operate our platform (under strict confidentiality agreements)',
+      privacySecurity: 'Data Security',
+      privacySecurityDesc: 'We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure.',
+      privacyRights: 'Your Rights',
+      privacyRightsDesc: 'You have the right to:',
+      privacyRightsList1: 'Access your personal information',
+      privacyRightsList2: 'Rectify inaccurate or incomplete information',
+      privacyRightsList3: 'Request deletion of your personal information',
+      privacyRightsList4: 'Object to the processing of your information',
+      privacyRightsList5: 'Request portability of your data',
+      privacyCookies: 'Cookies and Similar Technologies',
+      privacyCookiesDesc: 'We use cookies and similar technologies to improve your experience, analyze the use of our services, and personalize content. You can configure your browser to reject cookies, although this may affect some functionalities of our services.',
+      privacyChanges: 'Changes to this Policy',
+      privacyChangesDesc: 'We may update this Privacy Policy occasionally. We will notify you of significant changes by posting the new policy on this page and updating the "Last updated" date.',
+      privacyContact: 'Contact',
+      privacyContactDesc: 'If you have questions about this Privacy Policy, you can contact us at:',
+      privacyContactEmail: 'Email',
+      
+      termsAcceptance: 'Acceptance of Terms',
+      termsAcceptanceDesc: 'By accessing and using Zurura Kids services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our services.',
+      termsServiceDesc: 'Service Description',
+      termsServiceDescText: 'Zurura Kids provides a management platform for early education centers that allows parents, guardians, and educators to manage information about attendance, activities, and children\'s development.',
+      termsUsage: 'Use of Service',
+      termsUsageDesc: 'You agree to:',
+      termsUsageList1: 'Provide accurate and up-to-date information',
+      termsUsageList2: 'Maintain the confidentiality of your account and password',
+      termsUsageList3: 'Not use the service for illegal or unauthorized purposes',
+      termsUsageList4: 'Not interfere with the operation of the service',
+      termsUsageList5: 'Respect the rights of other users',
+      termsAccounts: 'User Accounts',
+      termsAccountsDesc: 'You are responsible for maintaining the confidentiality of your account and password. You agree to notify us immediately of any unauthorized use of your account. Zurura Kids will not be liable for any loss or damage resulting from your failure to maintain the security of your account.',
+      termsIntellectual: 'Intellectual Property',
+      termsIntellectualDesc: 'All content of the service, including but not limited to text, graphics, logos, icons, images, audio clips, and software, is the property of Zurura Kids or its content providers and is protected by intellectual property laws.',
+      termsLiability: 'Limitation of Liability',
+      termsLiabilityDesc: 'To the maximum extent permitted by law, Zurura Kids will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenue, regardless of whether we have been advised of the possibility of such damages.',
+      termsModifications: 'Service Modifications',
+      termsModificationsDesc: 'We reserve the right to modify, suspend, or discontinue any aspect of the service at any time, with or without prior notice. We will not be liable to you or any third party for any modification, suspension, or discontinuation of the service.',
+      termsTermination: 'Termination',
+      termsTerminationDesc: 'We may terminate or suspend your access to the service immediately, without prior notice, for any reason, including if you violate these Terms and Conditions. Upon termination, your right to use the service will cease immediately.',
+      termsLaw: 'Applicable Law',
+      termsLawDesc: 'These Terms and Conditions shall be governed and interpreted in accordance with applicable laws, without regard to their conflict of law provisions.',
+      termsChanges: 'Changes to Terms',
+      termsChangesDesc: 'We reserve the right to modify these Terms and Conditions at any time. We will notify you of significant changes by posting the new terms on this page and updating the "Last updated" date. Your continued use of the service after such changes constitutes your acceptance of the new terms.',
+      termsContact: 'Contact',
+      termsContactDesc: 'If you have questions about these Terms and Conditions, you can contact us at:',
+      termsContactEmail: 'Email'
     },
     es: {
       // Header
@@ -383,7 +527,79 @@ export class TranslationService {
       privacyAgreement: 'Acepto la política de privacidad y los términos de servicio.',
       sending: 'Enviando...',
       messageSent: '¡Mensaje enviado exitosamente!',
-      thankYou: 'Gracias por contactarnos. Te responderemos dentro de 24 horas.'
+      thankYou: 'Gracias por contactarnos. Te responderemos dentro de 24 horas.',
+      
+      // Privacy Policy & Terms
+      lastUpdated: 'Última actualización:',
+      backToHome: '← Volver al Inicio',
+      privacyPolicyTitle: 'Política de Privacidad',
+      termsTitle: 'Términos y Condiciones',
+      privacyIntroduction: 'Introducción',
+      privacyIntro: 'En Zurura Kids, nos comprometemos a proteger la privacidad y seguridad de la información personal de nuestros usuarios. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y protegemos su información cuando utiliza nuestros servicios.',
+      privacyInfoCollected: 'Información que Recopilamos',
+      privacyInfoCollectedDesc: 'Recopilamos información que usted nos proporciona directamente, incluyendo:',
+      privacyInfoCollectedList1: 'Información de contacto (nombre, dirección de correo electrónico, número de teléfono)',
+      privacyInfoCollectedList2: 'Información de la organización o escuela',
+      privacyInfoCollectedList3: 'Información de los niños bajo su cuidado (nombre, fecha de nacimiento, información de asistencia)',
+      privacyInfoCollectedList4: 'Cualquier otra información que elija proporcionarnos',
+      privacyHowWeUse: 'Cómo Usamos su Información',
+      privacyHowWeUseDesc: 'Utilizamos la información recopilada para:',
+      privacyHowWeUseList1: 'Proporcionar, mantener y mejorar nuestros servicios',
+      privacyHowWeUseList2: 'Procesar y gestionar las solicitudes de información',
+      privacyHowWeUseList3: 'Comunicarnos con usted sobre nuestros servicios',
+      privacyHowWeUseList4: 'Cumplir con obligaciones legales y regulatorias',
+      privacyHowWeUseList5: 'Proteger los derechos y la seguridad de nuestros usuarios',
+      privacySharing: 'Compartir Información',
+      privacySharingDesc: 'No vendemos, alquilamos ni compartimos su información personal con terceros, excepto en las siguientes circunstancias:',
+      privacySharingList1: 'Con su consentimiento explícito',
+      privacySharingList2: 'Para cumplir con obligaciones legales',
+      privacySharingList3: 'Para proteger nuestros derechos y seguridad',
+      privacySharingList4: 'Con proveedores de servicios que nos ayudan a operar nuestra plataforma (bajo estrictos acuerdos de confidencialidad)',
+      privacySecurity: 'Seguridad de los Datos',
+      privacySecurityDesc: 'Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro.',
+      privacyRights: 'Sus Derechos',
+      privacyRightsDesc: 'Usted tiene derecho a:',
+      privacyRightsList1: 'Acceder a su información personal',
+      privacyRightsList2: 'Rectificar información inexacta o incompleta',
+      privacyRightsList3: 'Solicitar la eliminación de su información personal',
+      privacyRightsList4: 'Oponerse al procesamiento de su información',
+      privacyRightsList5: 'Solicitar la portabilidad de sus datos',
+      privacyCookies: 'Cookies y Tecnologías Similares',
+      privacyCookiesDesc: 'Utilizamos cookies y tecnologías similares para mejorar su experiencia, analizar el uso de nuestros servicios y personalizar el contenido. Puede configurar su navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades de nuestros servicios.',
+      privacyChanges: 'Cambios a esta Política',
+      privacyChangesDesc: 'Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos sobre cambios significativos publicando la nueva política en esta página y actualizando la fecha de "Última actualización".',
+      privacyContact: 'Contacto',
+      privacyContactDesc: 'Si tiene preguntas sobre esta Política de Privacidad, puede contactarnos en:',
+      privacyContactEmail: 'Correo Electrónico',
+      
+      termsAcceptance: 'Aceptación de los Términos',
+      termsAcceptanceDesc: 'Al acceder y utilizar los servicios de Zurura Kids, usted acepta estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestros servicios.',
+      termsServiceDesc: 'Descripción del Servicio',
+      termsServiceDescText: 'Zurura Kids proporciona una plataforma de gestión para centros de educación temprana que permite a padres, tutores y educadores gestionar información sobre asistencia, actividades y desarrollo de los niños.',
+      termsUsage: 'Uso del Servicio',
+      termsUsageDesc: 'Usted se compromete a:',
+      termsUsageList1: 'Proporcionar información precisa y actualizada',
+      termsUsageList2: 'Mantener la confidencialidad de su cuenta y contraseña',
+      termsUsageList3: 'No utilizar el servicio para fines ilegales o no autorizados',
+      termsUsageList4: 'No interferir con el funcionamiento del servicio',
+      termsUsageList5: 'Respetar los derechos de otros usuarios',
+      termsAccounts: 'Cuentas de Usuario',
+      termsAccountsDesc: 'Es responsable de mantener la confidencialidad de su cuenta y contraseña. Usted acepta notificarnos inmediatamente de cualquier uso no autorizado de su cuenta. Zurura Kids no será responsable de ninguna pérdida o daño que resulte de su incumplimiento de mantener la seguridad de su cuenta.',
+      termsIntellectual: 'Propiedad Intelectual',
+      termsIntellectualDesc: 'Todo el contenido del servicio, incluyendo pero no limitado a texto, gráficos, logotipos, iconos, imágenes, clips de audio y software, es propiedad de Zurura Kids o sus proveedores de contenido y está protegido por leyes de propiedad intelectual.',
+      termsLiability: 'Limitación de Responsabilidad',
+      termsLiabilityDesc: 'En la máxima medida permitida por la ley, Zurura Kids no será responsable de ningún daño indirecto, incidental, especial, consecuente o punitivo, o cualquier pérdida de beneficios o ingresos, independientemente de si se nos ha advertido de la posibilidad de tales daños.',
+      termsModifications: 'Modificaciones del Servicio',
+      termsModificationsDesc: 'Nos reservamos el derecho de modificar, suspender o discontinuar cualquier aspecto del servicio en cualquier momento, con o sin previo aviso. No seremos responsables ante usted ni ante ningún tercero por cualquier modificación, suspensión o discontinuación del servicio.',
+      termsTermination: 'Terminación',
+      termsTerminationDesc: 'Podemos terminar o suspender su acceso al servicio inmediatamente, sin previo aviso, por cualquier motivo, incluyendo si viola estos Términos y Condiciones. Al terminar, su derecho a utilizar el servicio cesará inmediatamente.',
+      termsLaw: 'Ley Aplicable',
+      termsLawDesc: 'Estos Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes aplicables, sin tener en cuenta sus disposiciones sobre conflictos de leyes.',
+      termsChanges: 'Cambios a los Términos',
+      termsChangesDesc: 'Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Le notificaremos sobre cambios significativos publicando los nuevos términos en esta página y actualizando la fecha de "Última actualización". Su uso continuado del servicio después de dichos cambios constituye su aceptación de los nuevos términos.',
+      termsContact: 'Contacto',
+      termsContactDesc: 'Si tiene preguntas sobre estos Términos y Condiciones, puede contactarnos en:',
+      termsContactEmail: 'Correo Electrónico'
     }
   };
 
